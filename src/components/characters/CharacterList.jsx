@@ -1,16 +1,18 @@
 import React from 'react';
-import { useCharacters } from '../../state/CharacterProvider';
+import { useList } from '../../hooks/useList';
 import Character from './Character';
 
 const CharacterList = () => {
-  const characters = useCharacters();
+  const { characters } = useList();
 
-  const arnoldList = characters.map((character) => (
-    <li key={character.name}>
-      <Character {...character} />
-    </li>
-  ));
-  return <ul>{arnoldList}</ul>;
+  return (
+    <ul>
+      {characters.map(character => (
+        <li key={character._id}>
+          <Character image={character.image} name={character.name} />
+        </li>
+      ))}
+    </ul>
+  );
 };
-
 export default CharacterList;

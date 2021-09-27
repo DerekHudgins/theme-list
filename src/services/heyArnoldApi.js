@@ -4,5 +4,8 @@ export const fetchCharacters = async () => {
   );
   const json = await res.json();
 
-  return json.map(({ name, image }) => ({ name, image }));
+  return json.map(({ name, image }) => ({
+    name,
+    image,
+  }));
 };
