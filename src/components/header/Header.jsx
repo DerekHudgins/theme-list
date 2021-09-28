@@ -11,7 +11,7 @@ const Header = () => {
         color: theme ? 'black' : 'white',
       }}
     >
-      <button onClick={changeTheme}>changeTheme</button>
+      <button role="button" onClick={changeTheme}>changeTheme</button>
     </header>
   );
 };

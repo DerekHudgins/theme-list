@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Character = ({ name, image }) => {
   return (
-    <li>
+    <li i key={name._id}>
       <figure>
         <img src={image} alt={name} />
         <figcaption>{name}</figcaption>
