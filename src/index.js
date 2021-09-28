@@ -1,5 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './components/app/App';
+import ThemeProvider from './components/context/ThemeProvider';
 
-render(<App />, document.getElementById('root'));
+render(
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>,
+  document.getElementById('root')
+);
